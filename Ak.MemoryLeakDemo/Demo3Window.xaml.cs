@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
 using Ak.MemoryLeakDemo.Models;
@@ -19,7 +8,7 @@ using Ak.MemoryLeakDemo.Models;
 namespace Ak.MemoryLeakDemo
 {
     /// <summary>
-    /// Interaction logic for Demo3Window.xaml
+    ///     Interaction logic for Demo3Window.xaml
     /// </summary>
     public partial class Demo3Window : Window
     {
@@ -30,30 +19,36 @@ namespace Ak.MemoryLeakDemo
 
         private void GenerateButton_Click(object sender, RoutedEventArgs e)
         {
+            var serializerCount = Convert.ToInt32(SerializerCount.Text);
 
-            var serializerCount = 0;
-            int.TryParse(SerializerCount.Text, out serializerCount);
-
-            for (var i = 1; i <= serializerCount; i++)
+            for (var i = 0; i < serializerCount; i++)
             {
-                makeSerializer();
+                MakeSerializer();
             }
 
-            int totalCreated = Convert.ToInt32(GeneratedSerializerCount.Content);
+            var totalCreated = Convert.ToInt32(GeneratedSerializerCount.Content);
             totalCreated += serializerCount;
             GeneratedSerializerCount.Content = totalCreated.ToString();
         }
 
-        private void makeSerializer()
+        private void MakeSerializer()
         {
-    
-            XmlSerializer serializer = new XmlSerializer(typeof(WeatherInfo), new XmlRootAttribute("Current"));
+            var serializer = new XmlSerializer(typeof (WeatherInfo), new XmlRootAttribute("Current"));
             WeatherInfo info;
 
             using (XmlReader reader = XmlReader.Create(Directory.GetCurrentDirectory() + "/App_Data/weather.xml"))
             {
-                info = (WeatherInfo)serializer.Deserialize(reader);
+                info = (WeatherInfo) serializer.Deserialize(reader);
             }
         }
+
+        #region Solution
+
+        // Folgende Konstruktoren cachen die dynamische Assembly:
+        // -XmlSerializer(type)  
+        // -XmlSerializer(type, defaultNameSpace) 
+        // Falls ein anderer Konstruktor benötigt wird, dann muss der erstellte Serializer gecached werden
+
+        #endregion
     }
 }

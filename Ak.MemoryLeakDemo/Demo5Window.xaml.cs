@@ -27,17 +27,16 @@ namespace Ak.MemoryLeakDemo
             var muPdf = new MuPDF(pdfFilename, "");
             _pageCount = muPdf.PageCount;
             Array.Resize(ref _bitmaps, _pageCount);
-            for (int page = 1; page <= _pageCount; page++)
+            for (var page = 1; page <= _pageCount; page++)
             {
                 var pdfPage = new MuPDF(pdfFilename, "") {Page = page};
                 _bitmaps[page - 1] = pdfPage.GetBitmapSource(450, 0, 300, 300, 0, RenderType.RGB, false, false, 10000000);
             }
             _currentPage = 1;
-            PrevButton.IsEnabled = false;
+            
             UpdateImage();
 
-            NextButton.IsEnabled = _pageCount > _currentPage;
-            Image1.Source = _bitmaps[0];
+
         }
 
         private void OpenFile_Click(object sender, RoutedEventArgs e)
@@ -61,19 +60,19 @@ namespace Ak.MemoryLeakDemo
             }
             PageNumberLabel.Content = _currentPage.ToString();
             PageCountLabel.Content = _pageCount.ToString();
+            PrevButton.IsEnabled = _currentPage > 1;
+            NextButton.IsEnabled = _pageCount > _currentPage;
         }
 
         private void PrevButton_Click(object sender, RoutedEventArgs e)
         {
             _currentPage--;
-            PrevButton.IsEnabled = _currentPage > 1;
             UpdateImage();
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             _currentPage++;
-            NextButton.IsEnabled = _pageCount > _currentPage;
             UpdateImage();
         }
     }

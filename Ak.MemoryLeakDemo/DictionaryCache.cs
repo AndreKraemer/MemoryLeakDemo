@@ -5,7 +5,8 @@ namespace Ak.MemoryLeakDemo
 {
     public static class DictionaryCache
     {
-        private static Dictionary<int, Logfile> _cache = new Dictionary<int, Logfile>();
+        private static readonly Dictionary<int, Logfile> _cache = 
+            new Dictionary<int, Logfile>();
 
         public static Dictionary<int, Logfile> Cache
         {
