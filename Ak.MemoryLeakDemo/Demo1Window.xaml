@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ak.MemoryLeakDemo.Demo1Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Demo1Window" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120px"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="240px"/>
+        </Grid.ColumnDefinitions>
+        <Label Style="{StaticResource HeaderText}">Demo 1</Label>
+        <Image Grid.Row="0" Grid.Column="1" Source="Images/Profilbild_andrekraemer.png" Width="85" Height="85" HorizontalAlignment="Right" Margin="0,0,40,0" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="40,0,20,0">
+            <DataGrid x:Name="LogFileGrid" AutoGenerateColumns="False" MinHeight="200" Height="340">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id, Mode=OneTime}" Header="Id" />
+                    <DataGridTextColumn Binding="{Binding Path, Mode=OneTime}" Header="Path" Width="300"/>
+                    <DataGridTextColumn Binding="{Binding Size, Mode=OneTime}" Header="Size" />
+                </DataGrid.Columns>
+                
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>

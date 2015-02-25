@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Current>
+  <City Id="2953434" Name="Bad Breisig">
+    <Coord Lon="7.3" Lat="50.51"/>
+    <Country>
+      Germany
+    </Country>
+    <Sun Rise="2015-02-23T06:26:16" Set="2015-02-23T17:01:57"/>
+  </City>
+  <Temperature Value="2.06" Min="0.5" Max="3" Unit="celsius"/>
+  <Humidity Value="96" Unit="%"/>
+  <Pressure Value="1009.78" Unit="hPa"/>
+  <Wind>
+    <Speed Value="2.1111111111111" Name="Light breeze"/>
+    <Direction Value="180" Code="S" Name="South"/>
+  </Wind>
+  <Clouds Value="36" Name="scattered clouds"/>
+  <Visibility/>
+  <Precipitation Mode="no"/>
+  <Weather Number="802" Value="überwiegend bewölkt" Icon="03d"/>
+  <Lastupdate Value="2015-02-23T12:44:16"/>
+  <Head/>
+</Current>
+
