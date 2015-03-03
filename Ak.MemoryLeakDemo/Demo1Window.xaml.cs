@@ -77,8 +77,8 @@ namespace Ak.MemoryLeakDemo
         // public void Demo1Window()
         //{
         // ...
-        //    app.LoggedIn -= app_LoggedIn;
-        //    app.LoggedOut -= app_LoggedOut;
+        //    app.LoggedIn += app_LoggedIn;
+        //    app.LoggedOut += app_LoggedOut;
         //}
 
         // override OnClosing and deregister the event listener
