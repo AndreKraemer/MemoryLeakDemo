@@ -1,4 +1,15 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------
+// <copyright file="MuPDFConverter.cs" company=" mupdf-converter Team: https://code.google.com/p/mupdf-converter/">
+//      Copyright (C) 2015 mupdf-converter Team: https://code.google.com/p/mupdf-converter/
+//	Some Modifications to Demonstrate Memory Leaks by André Krämer
+//	Don't use this code in Production! go to https://code.google.com/p/mupdf-converter/ and get the
+//	current Release Version!
+// </copyright>
+// <summary>
+//  MuPDF
+// </summary>
+// --------------------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------
+// <copyright file="MainWindow.xaml.cs" company="André Krämer - Software, Training & Consulting">
+//      Copyright (c) 2015 André Krämer http://andrekraemer.de - 
+//      GPL3 License (see license.txt)
+// </copyright>
+// <summary>
+//  Memory Leak Demo Projekt
+// </summary>
+// --------------------------------------------------------------------------------------
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Ak.MemoryLeakDemo
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -29,7 +25,6 @@ namespace Ak.MemoryLeakDemo
         {
             var view = new Demo1Window();
             view.Show();
-
         }
 
 
@@ -37,7 +32,6 @@ namespace Ak.MemoryLeakDemo
         {
             var view = new Demo2Window();
             view.Show();
-
         }
 
 
@@ -45,7 +39,6 @@ namespace Ak.MemoryLeakDemo
         {
             var view = new Demo3Window();
             view.Show();
-
         }
 
 
@@ -53,7 +46,6 @@ namespace Ak.MemoryLeakDemo
         {
             var view = new Demo4Window();
             view.Show();
-
         }
 
 
@@ -61,21 +53,21 @@ namespace Ak.MemoryLeakDemo
         {
             var view = new Demo5Window();
             view.Show();
+        }
 
+        private void UrlButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://andrekraemer.de");
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             ((App) Application.Current).Login();
-
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
-            ((App)Application.Current).Logout();
-
+            ((App) Application.Current).Logout();
         }
-
-
     }
 }

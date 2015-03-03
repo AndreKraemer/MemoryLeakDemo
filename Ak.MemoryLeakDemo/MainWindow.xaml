@@ -4,26 +4,28 @@
         Title="MainWindow" Height="500" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120px"/>
+            <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="240px"/>
         </Grid.ColumnDefinitions>
         <Label Style="{StaticResource HeaderText}">Memory Leak Demo</Label>
-        <Image Grid.Row="0" Grid.Column="1" Source="Images/Profilbild_andrekraemer.png" Width="85" Height="85" HorizontalAlignment="Right" Margin="0,0,40,0" />
+        <Image Grid.Row="0" Grid.Column="1" Source="Images/Profilbild_andrekraemer.png" Width="85" Height="85" HorizontalAlignment="Right" Margin="0,18,40,18" />
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,40,0">
             <Button  Style="{StaticResource LinkButton}" FontSize="12" Height="auto" Click="Login_Click">Login</Button>
-            <Button  Style="{StaticResource LinkButton}" FontSize="12" Margin="10,0,0,0" Click="Logout_Click">Logout</Button> 
+            <Button  Style="{StaticResource LinkButton}" FontSize="12" Margin="10,0,0,0" Click="Logout_Click">Logout</Button>
         </StackPanel>
-       
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="40,0,20,0">
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="40,0,20,0" Grid.RowSpan="2">
             <Button Click="Demo1_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 1</Button>
             <Button Click="Demo2_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 2</Button>
             <Button Click="Demo3_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 3</Button>
             <Button Click="Demo4_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 4</Button>
             <Button Click="Demo5_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 5</Button>
         </StackPanel>
+        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource LinkButton}" Click="UrlButton_Click" FontSize="20px" Margin="40,0,0,0">http://andrekraemer.de</Button>
     </Grid>
 </Window>

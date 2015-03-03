@@ -1,4 +1,16 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------
+// <copyright file="MuPDF.cs" company=" mupdf-converter Team: https://code.google.com/p/mupdf-converter/">
+//      Copyright (C) 2015 mupdf-converter Team: https://code.google.com/p/mupdf-converter/
+//	Some Modifications to Demonstrate Memory Leaks by André Krämer
+//	Don't use this code in Production! go to https://code.google.com/p/mupdf-converter/ and get the
+//	current Release Version!
+// </copyright>
+// <summary>
+//  Memory Leak Demo Projekt -  MuPDF
+// </summary>
+// --------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -325,7 +337,7 @@ namespace MuPDFLib
         }
 
 
-
+        
         ~MuPDF()
         {
             if (this.m_pNativeObject != IntPtr.Zero)
@@ -337,16 +349,11 @@ namespace MuPDFLib
                     this._ImagePin.Free();
                 }
             }
-            Logging.logMessage("Finalized");
+           Logging.LogMessage("Finalized");
         }
 
-
-
-
-
-
         #region Commented
-        // Korrekte IDisposable implementation
+        // Correct IDisposable implementation -- Commented  by André Krämer to demonstrate a memory Leak
         /*
         
          public void Dispose()

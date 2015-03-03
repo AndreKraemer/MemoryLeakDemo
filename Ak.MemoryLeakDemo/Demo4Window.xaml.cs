@@ -1,27 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// --------------------------------------------------------------------------------------
+// <copyright file="Demo4Window.xaml.cs" company="André Krämer - Software, Training & Consulting">
+//      Copyright (c) 2015 André Krämer http://andrekraemer.de - 
+//      GPL3 License (see license.txt)
+// </copyright>
+// <summary>
+//  Memory Leak Demo Projekt
+// </summary>
+// --------------------------------------------------------------------------------------
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Ak.MemoryLeakDemo.ViewModels;
 using Ak.MemoryLeakDemo.Views;
 
 namespace Ak.MemoryLeakDemo
 {
     /// <summary>
-    /// Interaction logic for Demo4Window.xaml
+    ///     Have a look at Demo4View1ViewModel for the problem description and the solution
     /// </summary>
     public partial class Demo4Window : Window
     {
-        private int _clicks = 0;
+        private int _clicks;
+
         public Demo4Window()
         {
             InitializeComponent();

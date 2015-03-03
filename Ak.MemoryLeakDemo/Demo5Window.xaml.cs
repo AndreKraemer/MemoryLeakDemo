@@ -1,4 +1,13 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------
+// <copyright file="Demo5Window.xaml.cs" company="André Krämer - Software, Training & Consulting">
+//      Copyright (c) 2015 André Krämer http://andrekraemer.de - 
+//      GPL3 License (see license.txt)
+// </copyright>
+// <summary>
+//  Memory Leak Demo Projekt
+// </summary>
+// --------------------------------------------------------------------------------------
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -8,8 +17,15 @@ using MuPDFLib;
 namespace Ak.MemoryLeakDemo
 {
     /// <summary>
-    ///     Interaction logic for Demo5Window.xaml
+    ///     Instruction: Open some of the pdf files from the app_data directory
+    ///     Solution: Have a look at MuPDF.cs in the MuPDF projecct
     /// </summary>
+#region solution
+            // This demo shows an issue caused by blocking Finalizers. In order to demonstrate this, the
+            // implementation of IDisposable was commented out and the finalizer was modified.
+            // In order to Block the finalizer, a thread.sleep was introduced in the "fake" logging library.
+            // So in order to solve that issue: Delete the thread.sleep and implement IDisposable for MuPDF
+#endregion
     public partial class Demo5Window : Window
     {
         private static BitmapSource[] _bitmaps = new BitmapSource[0];

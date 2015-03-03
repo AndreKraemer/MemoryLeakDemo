@@ -1,4 +1,13 @@
-﻿using System.Collections.Generic;
+﻿// --------------------------------------------------------------------------------------
+// <copyright file="DictionaryCache.cs" company="André Krämer - Software, Training & Consulting">
+//      Copyright (c) 2015 André Krämer http://andrekraemer.de - 
+//      GPL3 License (see license.txt)
+// </copyright>
+// <summary>
+//  Memory Leak Demo Projekt
+// </summary>
+// --------------------------------------------------------------------------------------
+using System.Collections.Generic;
 using Ak.MemoryLeakDemo.ViewModels;
 
 namespace Ak.MemoryLeakDemo
