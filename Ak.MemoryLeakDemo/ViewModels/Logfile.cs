@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------
 // <copyright file="Logfile.cs" company="André Krämer - Software, Training & Consulting">
-//      Copyright (c) 2015 André Krämer http://andrekraemer.de - 
+//      Copyright (c) 2015 - 2023 André Krämer https://www.andrekraemer.de - 
 //      GPL3 License (see license.txt)
 // </copyright>
 // <summary>
@@ -13,6 +13,7 @@ using System.Runtime.CompilerServices;
 
 namespace Ak.MemoryLeakDemo.ViewModels
 {
+
     public class Logfile : INotifyPropertyChanged
     {
         private int _size;

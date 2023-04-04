@@ -26,6 +26,6 @@
             <Button Click="Demo4_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 4</Button>
             <Button Click="Demo5_Click" Style="{StaticResource LinkButton}" FontSize="20px">Demo 5</Button>
         </StackPanel>
-        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource LinkButton}" Click="UrlButton_Click" FontSize="20px" Margin="40,0,0,0">http://andrekraemer.de</Button>
+        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource LinkButton}" Click="UrlButton_Click" FontSize="20px" Margin="40,0,0,0">https://www.andrekraemer.de</Button>
     </Grid>
 </Window>

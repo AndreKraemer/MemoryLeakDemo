@@ -27,7 +27,7 @@ namespace Ak.MemoryLeakDemo
         public Demo1Window()
         {
             InitializeComponent();
-            var logEntries = GenerateLogEntries(1000);
+            var logEntries = GenerateLogEntries(5000);
             LogFileGrid.ItemsSource = new ObservableCollection<Logfile>(logEntries);
 
             var app = Application.Current as App;
@@ -44,10 +44,11 @@ namespace Ak.MemoryLeakDemo
             {
                 Title = "Demo 1 - LoggedOut";
                 LogFileGrid.IsEnabled = false;
-                var blur = new BlurEffect();
-                blur.Radius = 10;
                 this.Background = new SolidColorBrush(Colors.DarkGray);
-                this.Effect = blur;
+                this.Effect = new BlurEffect
+                {
+                    Radius = 10
+                };
             };
         }
 
@@ -100,7 +101,7 @@ namespace Ak.MemoryLeakDemo
                 {
                     Id = i,
                     Path = System.IO.Path.GetRandomFileName(),
-                    Size = randomizer.Next(50, 200)
+                    Size = randomizer.Next(10, 100)
                 };
                 yield return entry;
             }

@@ -1,12 +1,13 @@
 ﻿// --------------------------------------------------------------------------------------
 // <copyright file="MainWindow.xaml.cs" company="André Krämer - Software, Training & Consulting">
-//      Copyright (c) 2015 André Krämer http://andrekraemer.de - 
+//      Copyright (c) 2015 - 2023 André Krämer https://www.andrekraemer.de - 
 //      GPL3 License (see license.txt)
 // </copyright>
 // <summary>
 //  Memory Leak Demo Projekt
 // </summary>
 // --------------------------------------------------------------------------------------
+using Ak.MemoryLeakDemo.ViewModels;
 using System.Windows;
 
 namespace Ak.MemoryLeakDemo
@@ -16,9 +17,21 @@ namespace Ak.MemoryLeakDemo
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Logfile _logfile;
+        private string _path = @"c:\temp\file1.log";
+
         public MainWindow()
         {
             InitializeComponent();
+
+            _logfile = new Logfile
+            {
+                Id = 1,
+                Size = 1,
+                Path = _path,
+                Content = new byte[1024]
+            };
+
         }
 
         private void Demo1_Click(object sender, RoutedEventArgs e)
@@ -57,7 +70,7 @@ namespace Ak.MemoryLeakDemo
 
         private void UrlButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://andrekraemer.de");
+            System.Diagnostics.Process.Start("https://www.andrekraemer.de");
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
