@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.MemoryLeakDemo", "Ak.MemoryLeakDemo\Ak.MemoryLeakDemo.csproj", "{BA9B49AE-C449-4C27-BF75-6626A70B41C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuPDF", "MuPdf\MuPDF.csproj", "{10CBC5AF-44A7-4821-81A2-B478B1FCBA24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{42583378-B006-42A0-ADB5-4FD766D65D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.MemoryLeakDemo.Tests", "Ak.MemoryLeakDemo.Tests\Ak.MemoryLeakDemo.Tests.csproj", "{8075C53A-228E-4109-BED4-C0AF7DFB930D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,8 +43,19 @@ Global
 		{42583378-B006-42A0-ADB5-4FD766D65D3E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42583378-B006-42A0-ADB5-4FD766D65D3E}.Release|x86.ActiveCfg = Release|x86
 		{42583378-B006-42A0-ADB5-4FD766D65D3E}.Release|x86.Build.0 = Release|x86
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Debug|x86.Build.0 = Debug|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Release|x86.ActiveCfg = Release|Any CPU
+		{8075C53A-228E-4109-BED4-C0AF7DFB930D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB29ABA7-1E36-4A62-890F-68640B3FF2FD}
 	EndGlobalSection
 EndGlobal
